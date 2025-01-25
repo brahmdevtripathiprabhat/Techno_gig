@@ -380,7 +380,67 @@
       }
     }
   }}
- 
+
+/* Happy Client Section CSS */
+.happy-clients {
+    padding: 2rem;
+    background: linear-gradient(135deg, #ffd700, #ffffff);
+    text-align: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 0.8rem;
+   
+  
+    .section-heading {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.5rem;
+      color: #e67e22;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    }
+  
+    .platform-ratings {
+      max-width: 800px;
+      margin: 0 auto;
+  
+      .rating {
+        margin-bottom: 1.5rem;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+  
+        h3 {
+          flex: 1;
+          font-size: 1.2rem;
+          color: #333;
+        }
+  
+        .progress-bar-container {
+          flex: 3;
+          background: #f1f1f1;
+          border-radius: 10px;
+          overflow: hidden;
+          position: relative;
+  
+          .progress-bar {
+            height: 10px;
+            background: #e67e22;
+            width: 0; 
+            transition: width 1.5s ease-in-out; 
+          }
+        }
+  
+        .rating-percent {
+          flex: 0.5;
+          font-size: 1rem;
+          color: #333;
+          font-weight: bold;
+        }
+      }
+    }
+  }
   
   /* testimonial section */
   .testimonial-heading {
