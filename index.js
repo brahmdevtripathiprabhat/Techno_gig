@@ -1,36 +1,3 @@
-
-
-const slides = document.querySelectorAll(".testimonial-slide");
-const indicators = document.querySelectorAll(".indicator");
-let currentIndex = 0;
-
-function updateSlider(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.remove("active");
-    indicators[i].classList.remove("active");
-    if (i === index) {
-      slide.classList.add("active");
-      indicators[i].classList.add("active");
-    }
-  });
-}
-
-indicators.forEach((indicator, i) => {
-  indicator.addEventListener("click", () => {
-    currentIndex = i;
-    updateSlider(currentIndex);
-  });
-});
-
-setInterval(() => {
-  currentIndex = (currentIndex + 1) % slides.length;
-  updateSlider(currentIndex);
-}, 5000);
-
-updateSlider(currentIndex);
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.querySelector(".navbar");
   const heroSection = document.querySelector("#heroSection");
@@ -68,6 +35,68 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
- 
 
-  
+const slides = document.querySelectorAll(".testimonial-slide");
+const indicators = document.querySelectorAll(".indicator");
+const prevBtn = document.querySelector(".control.prev");
+const nextBtn = document.querySelector(".control.next");
+let currentIndex = 0;
+
+function updateSlider(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove("active");
+    indicators[i].classList.remove("active");
+    if (i === index) {
+      slide.classList.add("active");
+      indicators[i].classList.add("active");
+    }
+  });
+}
+
+indicators.forEach((indicator, i) => {
+  indicator.addEventListener("click", () => {
+    currentIndex = i;
+    updateSlider(currentIndex);
+  });
+});
+
+prevBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  updateSlider(currentIndex);
+});
+
+nextBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateSlider(currentIndex);
+});
+
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateSlider(currentIndex);
+}, 5000);
+
+updateSlider(currentIndex);
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const progressBars = document.querySelectorAll(".progress-bar");
+
+  const animateBars = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const bar = entry.target;
+        const percent = bar.getAttribute("data-percent");
+        bar.style.width = ${percent}%; 
+        observer.unobserve(bar); 
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(animateBars, {
+    threshold: 0.3, 
+  });
+
+  progressBars.forEach((bar) => {
+    observer.observe(bar); 
+  });
+});
