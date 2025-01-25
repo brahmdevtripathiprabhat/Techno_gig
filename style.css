@@ -446,25 +446,29 @@
   .testimonial-heading {
     text-align: center;
     padding: 2rem;
-   
+  
     h2 {
       font-family: 'Dancing Script', cursive;
       font-size: 3rem;
       color: #e67e22;
       margin: 0;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      border-bottom: 3px solid #ffd700;
+      display: inline-block;
+      padding-bottom: 0.5rem;
     }
   }
+  
   .testimonial-slider {
-    background: linear-gradient(135deg, #ffd700, #ffffff); 
+    background: linear-gradient(135deg, #ffd700, #ffffff);
     padding: 2rem 1rem;
     border-radius: 10px;
     text-align: center;
-    color:#000000;
     font-family: 'Georgia', serif;
     max-width: 800px;
-    margin: 0 auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 2rem auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
   
     .slider-container {
       position: relative;
@@ -487,15 +491,26 @@
           margin-bottom: 1.5rem;
         }
   
+        .client-photo {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          margin: 0 auto 1rem auto;
+          object-fit: cover;
+          border: 3px solid #ffd700;
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+  
         .client-name {
           font-size: 1.3rem;
-          color: black;
+          color: #333;
           margin-top: 1rem;
+          font-weight: bold;
         }
   
         .client-info {
           font-size: 1rem;
-          color: black;
+          color: #555;
         }
       }
     }
@@ -515,10 +530,51 @@
         transition: background 0.3s;
   
         &.active {
-          background: #ffd700; 
+          background: #e67e22;
         }
       }
     }
+  
+    .slider-controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      pointer-events: none; 
+      padding: 0 1rem;
+    
+      .control {
+        background: rgba(0, 0, 0, 0.6);
+        color: #ffffff;
+        font-size: 1.5rem;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        pointer-events: auto; 
+        transition: background 0.3s;
+    
+        &:hover {
+          background: rgba(0, 0, 0, 0.8);
+        }
+    
+        &.prev {
+          position: absolute;
+          left: 1rem; 
+        }
+    
+        &.next {
+          position: absolute;
+          right: 2rem; 
+        }
+      }
+    }
+    
   
     @media (max-width: 768px) {
       .slider-container {
