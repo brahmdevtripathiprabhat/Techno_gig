@@ -37,6 +37,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+//service slider 
+
+
+
 const slides = document.querySelectorAll(".testimonial-slide");
 const indicators = document.querySelectorAll(".indicator");
 const prevBtn = document.querySelector(".control.prev");
@@ -101,6 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(bar); 
   });
 });
+
 
 
 
