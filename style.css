@@ -262,127 +262,198 @@ html, body {
     margin-left: 2rem;
   }
 }
+/* Service Section Styling */
 
-.services-section {
-  padding: 2rem;
+#services {
+  background-color: #f9f9f9;
+  padding: 3rem 1rem;
+}
+
+#services .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#services .text-center h2 {
+  font-size: 2.5rem;
+  color: #e67e22;
+  margin-bottom: 0.5rem;
+}
+
+#services .text-center p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Card Styling */
+#serviceCarousel .service-card {
+  background-color: #fffae6;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#serviceCarousel .service-card:hover {
+  transform: translateY(0px);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+#serviceCarousel .service-card img {
+  width: 80%;
+  margin: 1rem auto;
+  display: block;
+  border-radius: 8px;
+}
+
+#serviceCarousel .service-card .card-body {
+  padding: 1.5rem;
   text-align: center;
+}
 
-  .appointment-section {
-    background-color: #f7f8fa;
-    padding: 2rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
+#serviceCarousel .service-card h5 {
+  font-size: 1.4rem;
+  color: #e67e22;
+  margin-bottom: 1rem;
+}
 
-    h2 {
-      font-size: 2.5rem;
-      color: #e67e22;
-    }
+#serviceCarousel .service-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
 
-    p {
-      font-size: 1.1rem;
-      margin: 1rem 0;
-      color: #555;
-    }
-    .appointment-button {
-      padding: 0.8rem 1.5rem;
-      background-color: #3498db;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s;
+/* Carousel Control Buttons */
+#services .carousel-control-prev,
+#services .carousel-control-next {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.6); 
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 13rem;
+ 
+}
 
-      &:hover {
-        background-color: #d08a1a;
-      }
-    }
+
+
+#services .carousel-control-prev:hover,
+#services .carousel-control-next:hover {
+  background-color: #2c3e50; 
+  transform: scale(1.1);
+}
+
+#services .carousel-control-prev-icon,
+#services .carousel-control-next-icon {
+  background-size: 20px 20px;
+  filter: brightness(0) invert(1);
+}
+
+#services .carousel-control-prev {
+  left: -60px;
+}
+
+#services .carousel-control-next {
+  right: -60px;
+}
+
+#services .carousel-control-prev:hover .carousel-control-prev-icon,
+#services .carousel-control-next:hover .carousel-control-next-icon {
+  filter: brightness(1.2);
+}
+
+#services .carousel-control-prev-icon {
+  background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns%3D%27http://www.w3.org/2000/svg%27 fill%3D%27%23fff%27 viewBox%3D%270 0 16 16%27%3E%3Cpath fill-rule%3D%27evenodd%27 d%3D%27M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z%27/%3E%3C/svg%3E');
+}
+
+#services .carousel-control-next-icon {
+  background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns%3D%27http://www.w3.org/2000/svg%27 fill%3D%27%23fff%27 viewBox%3D%270 0 16 16%27%3E%3Cpath fill-rule%3D%27evenodd%27 d%3D%27M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z%27/%3E%3C/svg%3E');
+}
+
+/* Small screens */
+@media (max-width: 767.98px) {
+  #services .carousel-control-prev {
+    margin-left: 30px; 
   }
 
-  .spacing{
-    margin-top: 1rem;
+  #services .carousel-control-next {
+    margin-right: 30px; 
   }
-  .spacing_bottom{
-    margin-bottom: 1rem;
+}
+
+/* Medium screens */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #services .carousel-control-prev {
+    margin-left: 30px;
   }
 
-  .container {
-    .section-title {
-      font-size: 2rem;
-      color: #f19e18;
-      margin-bottom: 1rem;
-    }
-  
-    .section-description {
-      color: #555;
-      margin-bottom: 2rem;
-    }
-  
-    .services-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-  
-      .service-card {
-        background-color: #fffae6;
-        border-radius: 10px;
-        padding: 1.5rem;
-        text-align: center;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        flex: 1 1 calc(45% - 1rem); 
-        max-width: 300px;
-  
-        img.service-image {
-          width: 100%;
-          height: auto;
-          border-radius: 8px;
-          margin-bottom: 1rem;
-        }
-  
-        h3 {
-          font-size: 1.5rem;
-          color: #e67e22;
-        }
-  
-        p {
-          color: #555;
-          font-size: 0.9rem;
-        }
-      }
-    }
-  
+  #services .carousel-control-next {
+    margin-right: 30px; 
+  }
+}
 
-    @media (max-width: 1024px) {
-      .services-grid {
-        .service-card {
-          flex: 1 1 calc(50% - 1rem);
-        }
-      }
-    }
+/* Large screens */
+@media (min-width: 992px) {
+  #services .carousel-control-prev {
+    margin-left: 30px; 
+  }
+
+  #services .carousel-control-next {
+    margin-right: 30px;
+  }
+}
+/* book an appointment section */
+/* Section Styling */
+#book-appointment {
+  background-color: #fff9e6; 
+  padding: 3rem 1rem;
+  border-radius: 10px;
   
-    @media (max-width: 768px) {
-      .services-grid {
-        .service-card {
-          flex: 1 1 100%; 
-        }
-      }
-    }
-  
-    @media (max-width: 480px) {
-      .section-title {
-        font-size: 1.5rem; 
-      }
-  
-      .section-description {
-        font-size: 0.9rem; 
-      }
-  
-      .service-card {
-        padding: 1rem; 
-      }
-    }
-  }}
+  margin-bottom: 1rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+/* Title */
+#book-appointment h2 {
+  color: #ff7f11; 
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Paragraph */
+#book-appointment p {
+  font-size: 1rem;
+  color: #cc6c01; 
+}
+
+/* Button */
+#book-appointment .custom-btn {
+  background-color: #ffae42; 
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 5px 10px rgba(255, 174, 66, 0.5);
+  transition: all 0.3s ease;
+}
+
+/* Button Hover */
+#book-appointment .custom-btn:hover {
+  background-color: #ff7f11; 
+  box-shadow: 0 8px 15px rgba(255, 127, 17, 0.6);
+  transform: translateY(-3px); 
+}
+
+
+
  
   .happy-clients {
     padding: 2rem;
