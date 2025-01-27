@@ -1,55 +1,40 @@
 .navbar {
-  background: #000000;
-  padding-bottom: 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-  margin-bottom: 0;
-}
-
-.navbar-brand {
-  font-family: "Pacifico", cursive;
-  font-size: 2rem;
-  color: #ffd700;
-  text-shadow: 1px 1px 5px rgba(255, 215, 0, 0.5);
-  transition: color 0.3s ease;
-}
-
-.navbar-brand:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
-.nav-link {
-  color: #ffd700;
-  font-size: 2rem;
-  font-weight: bold;
-  text-shadow: 1px 1px 5px rgba(255, 215, 0, 0.2);
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-.navbar-toggler {
-  border: none;
-  background-color: #ffd700;
-  border-radius: 5px;
-  padding: 0.5rem;
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 215, 0, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Golden lines for toggler icon */
-}
-
-@media (max-width: 992px) {
-  .navbar-nav {
-    text-align: center;
-    margin-top: 1rem;
+    background: #000000;
+    padding-bottom: 0;
+    box-shadow: none;
+    margin-bottom: 0;
+    font-size: larger;
   }
-
-  .nav-link {
-    margin: 0.7rem 0;
+  
+  .navbar-brand {
+    font-family: "Pacifico", cursive;
+    font-size: 2rem !important;
+    color: #ffd700;
+    font-weight: bold !important;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-brand:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav-link  {
+    color: #ffd700;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(255, 215, 0, 0.2);
+    transition: color 0.3s ease;
+  }
+  .navbar .nav-link {
+    color: white; 
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .nav-link:hover {
+    color: #ffffff;
+    text-decoration: none;
   }
 }
 /* General Styling */
@@ -507,9 +492,14 @@ margin-top: 30px;
   padding: 0;
 }
 
-.quick-links li {
-  margin: 0.5rem 0;
-}
+
+.quick-links li:not(:first-child) {
+  margin: 0.8rem 0 0 0;
+}  
+
+.quick-links li:first-child {
+  margin: 0;
+} 
 
 .quick-links a {
   color: black;
@@ -537,6 +527,14 @@ margin-top: 30px;
   text-align: center;
   font-size: 0.9rem;
   color: #fff;
+}
+
+#Footer_address a{
+  text-decoration: none;
+  color: black;
+}
+.Address_footer:hover{
+  color: blue;
 }
 
 

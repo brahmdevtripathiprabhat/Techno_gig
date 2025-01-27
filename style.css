@@ -537,7 +537,11 @@ html, body {
       padding-bottom: 0.5rem;
     }
   }
-  
+
+  .testimonial-slider a {
+    all: unset;
+  }
+
   .testimonial-slider {
     background: linear-gradient(135deg, #ffd700, #ffffff);
     padding: 2rem 1rem;
