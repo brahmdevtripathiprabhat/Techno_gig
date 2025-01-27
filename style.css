@@ -188,6 +188,8 @@ html, body {
 
 .legacy-text {
   font-size: 1.3rem;
+  text-align: justify;
+  text-align: justify;
   color: #2c3e50;
   line-height: 1.8;
   margin-bottom: 1.5rem;
@@ -233,6 +235,8 @@ html, body {
 
   .legacy-text {
     font-size: 1rem;
+    padding: 0 3vw;
+    margin-top: 1.5rem;
   }
 
   .legacy-image {
@@ -259,7 +263,8 @@ html, body {
 
   .legacy-text {
     font-size: 0.9rem; 
-    margin-left: 2rem;
+    padding: 0 3vw;
+    margin-top: 1.5rem;
   }
 }
 /* Service Section Styling */
@@ -540,7 +545,7 @@ html, body {
     text-align: center;
     font-family: 'Georgia', serif;
     max-width: 800px;
-    margin: 2rem auto;
+    margin: 1rem auto;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     position: relative;
   
@@ -679,8 +684,7 @@ html, body {
     background: linear-gradient(45deg, #ffa500, #ffcc33);
     color: black;
     font-family: 'Raleway', sans-serif;
-    padding: 2rem 1rem;
-    margin-top: 1rem;
+    padding: 2rem 1rem 1rem 1rem;
   }
   
   .footer-container {
@@ -729,9 +733,13 @@ html, body {
     padding: 0;
   }
   
-  .quick-links li {
-    margin: 0.5rem 0;
-  }
+  .quick-links li:not(:first-child) {
+    margin: 0.8rem 0 0 0;
+  }  
+  
+  .quick-links li:first-child {
+    margin: 0;
+  }  
   
   .quick-links a {
     color: black;
