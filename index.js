@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.querySelector(".navbar");
   const heroSection = document.querySelector("#heroSection");
@@ -6,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const navbarCollapse = document.querySelector(".navbar-collapse");
 
   if (navbar && heroSection && navbarToggler && navbarCollapse) {
- 
     window.addEventListener("scroll", () => {
       if (window.scrollY > heroSection.offsetHeight) {
         navbar.classList.add("scrolled");
@@ -36,54 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
-
-//service slider 
-
-
-
-const slides = document.querySelectorAll(".testimonial-slide");
-const indicators = document.querySelectorAll(".indicator");
-const prevBtn = document.querySelector(".control.prev");
-const nextBtn = document.querySelector(".control.next");
-let currentIndex = 0;
-
-function updateSlider(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.remove("active");
-    indicators[i].classList.remove("active");
-    if (i === index) {
-      slide.classList.add("active");
-      indicators[i].classList.add("active");
-    }
-  });
-}
-
-indicators.forEach((indicator, i) => {
-  indicator.addEventListener("click", () => {
-    currentIndex = i;
-    updateSlider(currentIndex);
-  });
-});
-
-prevBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  updateSlider(currentIndex);
-});
-
-nextBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % slides.length;
-  updateSlider(currentIndex);
-});
-
-setInterval(() => {
-  currentIndex = (currentIndex + 1) % slides.length;
-  updateSlider(currentIndex);
-}, 5000);
-
-updateSlider(currentIndex);
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const progressBars = document.querySelectorAll(".progress-bar");
 
@@ -93,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const bar = entry.target;
         const percent = bar.getAttribute("data-percent");
         bar.style.width = `${percent}%`; 
-        observer.unobserve(bar); 
+        observer.unobserve(bar);
       }
     });
   };
@@ -103,9 +53,44 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   progressBars.forEach((bar) => {
-    observer.observe(bar); 
+    observer.observe(bar);
   });
 });
+
+// testimonial section
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.querySelector(".testimonial-container");
+
+  if (!container) {
+    console.error("Testimonial container not found.");
+    return;
+  }
+
+  window.scrollLeftTestimonial = function () { 
+    container.scrollBy({ left: -200, behavior: "smooth" });
+  };
+
+  window.scrollRightTestimonial = function () { 
+    container.scrollBy({ left: 200, behavior: "smooth" });
+  };
+
+ 
+  document.querySelector(".scroll-btn.left")?.addEventListener("click", scrollLeftTestimonial);
+  document.querySelector(".scroll-btn.right")?.addEventListener("click", scrollRightTestimonial);
+});
+
+
+function openImage(img) {
+  document.getElementById("fullImage").src = img.src;
+  document.getElementById("imageModal").style.display = "flex";
+}
+
+function closeImage(event) {
+  if (event.target.classList.contains("image-modal") || event.target.classList.contains("close-btn")) {
+    document.getElementById("imageModal").style.display = "none";
+  }
+}
+
 
 
 
