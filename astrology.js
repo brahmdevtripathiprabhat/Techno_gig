@@ -11,3 +11,13 @@ window.onscroll = function () {
 backToTopBtn.addEventListener("click", function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+
+document.querySelectorAll('.section-title').forEach((title, index) => {
+  if (index === 0 || index === 1) {
+    title.addEventListener('click', () => {
+      const content = title.nextElementSibling;
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    });
+  }
+});

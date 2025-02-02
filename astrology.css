@@ -36,7 +36,12 @@
     color: #ffffff;
     text-decoration: none;
   }
-}
+
+
+  .section-title + span {
+    display: none;
+  }
+
 /* General Styling */
 body {
   font-family: "Poppins", sans-serif;
@@ -52,6 +57,7 @@ body {
   color: #ffd700;
   text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.6);
   margin-bottom: 1.5rem;
+  cursor:pointer;
 }
 /*Astrology*/
 .cont {
