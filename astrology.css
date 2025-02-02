@@ -1,47 +1,56 @@
 .navbar {
-    background: #000000;
-    padding-bottom: 0;
-    box-shadow: none;
-    margin-bottom: 0;
-    font-size: larger;
-  }
-  
-  .navbar-brand {
-    font-family: "Pacifico", cursive;
-    font-size: 2rem !important;
-    color: #ffd700;
-    font-weight: bold !important;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar-brand:hover {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .nav-link  {
-    color: #ffd700;
-    font-size: 2rem;
-    font-weight: bold;
-    text-shadow: 1px 1px 5px rgba(255, 215, 0, 0.2);
-    transition: color 0.3s ease;
-  }
-  .navbar .nav-link {
-    color: white; 
-    font-weight: bold;
-    font-size: 1.5rem;
-  }
-  
-  .nav-link:hover {
-    color: #ffffff;
-    text-decoration: none;
-  }
+  background: transparent;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  font-size: larger;
+  box-shadow: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+}
 
+.navbar .nav-link:hover {
+  color: white;
+  text-decoration: none;
+}
 
-  .section-title + span {
-    display: none;
-  }
+.navbar-brand {
+  font-size: 2rem !important;
+  color: white !important;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
 
+/* Navbar Links */
+.navbar .nav-link {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar .navbar-toggler-icon {
+  stroke: white;
+  transition: stroke 0.3s ease;
+}
+
+.navbar.scrolled .navbar-toggler-icon {
+  stroke: black;
+}
+
+@media (max-width: 992px) {
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.nav-link {
+  padding-bottom:0!important;
+  text-align:center;
+}
+}
 /* General Styling */
 body {
   font-family: "Poppins", sans-serif;
