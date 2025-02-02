@@ -52,12 +52,15 @@ body {
 }
 
 .section-title {
-  font-family: "Pacifico", cursive;
+  font-family: "Charm", serif;
+    font-weight: 400;
+    font-style: normal;
   font-size: 3rem;
   color: #ffd700;
   text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.6);
   margin-bottom: 1.5rem;
-  cursor:pointer;
+  text-align: center;
+  margin-top: 10px;
 }
 /*Astrology*/
 .cont {
