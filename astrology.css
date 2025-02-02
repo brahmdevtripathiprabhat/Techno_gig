@@ -60,17 +60,6 @@ body {
   padding: 0;
 }
 
-.section-title {
-  font-family: "Charm", serif;
-    font-weight: 400;
-    font-style: normal;
-  font-size: 3rem;
-  color: #ffd700;
-  text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.6);
-  margin-bottom: 1.5rem;
-  text-align: center;
-  margin-top: 10px;
-}
 /*Astrology*/
 .cont {
 margin: 40px auto;
@@ -144,7 +133,9 @@ margin-bottom: 10px;
 }
 
 .section-title {
-  font-family: "Pacifico", cursive;
+  font-family: "Charm", serif;
+    font-weight: 400;
+    font-style: normal;
   font-size: 3rem;
   color: #ffd700;
   text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.6);
@@ -152,9 +143,6 @@ margin-bottom: 10px;
   text-align: center;
   margin-top: 10px;
 }
-
-
-
 .light-container {
 margin: 20px auto; /* Center the container horizontally and add vertical spacing */
 padding: 20px;
