@@ -675,7 +675,28 @@ p {
   border-radius: 10px;
   object-fit: contain;
 }
+.justdial-link {
+  text-decoration: none;  /* Removes underline */
+  color: black;           /* Default text color */
+  font-weight: bold;
+  font-size: 18px;         /* Adjust size */
+  transition: color 0.3s ease;  /* Smooth hover effect */
+}
 
+.justdial-link:hover {
+  color: brown;  /* Change text to yellow on hover */
+}
+.google-link {
+  text-decoration: none;  /* Removes underline */
+  color: black;           /* Default text color */
+  font-weight: bold;
+  font-size: 18px;         /* Adjust size */
+  transition: color 0.3s ease;  /* Smooth hover effect */
+}
+
+.google-link:hover {
+  color: brown;  /* Change text to yellow on hover */
+}
 /* Close Button Fix */
 .close-btn {
   position: absolute;
@@ -785,7 +806,7 @@ p {
 }
 
 .Address_footer:hover {
-  color: blue;
+  color: #ff6600;
 }
 
 
