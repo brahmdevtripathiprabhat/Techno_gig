@@ -19,6 +19,7 @@
   color: white !important;
   font-weight: bold;
   transition: color 0.3s ease-in-out;
+  font-family: "Pacifico", cursive;
 }
 
 /* Navbar Links */
@@ -53,7 +54,7 @@
 }
 /* General Styling */
 body {
-  font-family: "Pacifico", cursive;
+  font-family: "Poppins", sans-serif;
   background-color: #0d0d0d;
   color: #ffffff;
   margin: 0;
