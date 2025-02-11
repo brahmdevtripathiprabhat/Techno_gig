@@ -46,9 +46,11 @@ body {
   font-size: 1.5rem;
 }
 
+
 .navbar.scrolled .nav-link {
-  color: rgb(171, 24, 24);
+  color: black;
 }
+
 
 .navbar .navbar-toggler-icon {
   stroke: white;
@@ -60,18 +62,18 @@ body {
 }
 
 @media (max-width: 992px) {
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-  }
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
 
-  .nav-link {
-    padding-bottom: 0 !important;
-    text-align: center;
-  }
+.nav-link {
+  padding-bottom:0!important;
+  text-align:center;
+}
 }
 
 .hero-content {
@@ -80,10 +82,13 @@ body {
   transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
+
 .hero-content.hide-text {
   opacity: 0;
   visibility: hidden;
 }
+
+
 
 #heroSection {
   position: relative;
@@ -133,7 +138,7 @@ body {
 
 .hero-content > .custom-btn:hover {
   background-color: #ff7f11;
-
+  
   transform: translateY(-3px);
 }
 
@@ -141,25 +146,26 @@ body {
   font-size: 3rem;
   font-weight: bold;
   font-family: "Charm", serif;
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .hero-content p {
   font-size: 1.5rem;
 }
 
+
 .astrodivider {
   margin: 20px auto 0 auto;
   width: 400px;
   max-width: 100%;
   position: relative;
-  z-index: 15;
+  z-index:15;
 }
 
 .astrodividermask {
   overflow: hidden;
-  z-index: 14;
+  z-index:14;
   height: 20px;
 }
 
@@ -200,6 +206,7 @@ body {
   color: #049372;
 }
 
+
 .legacy-section {
   padding: 3rem 16px;
   background-color: #f8f9fa;
@@ -222,6 +229,7 @@ body {
   margin-bottom: 1.5rem;
 }
 
+
 .legacy-header {
   font-family: "Lobster", cursive;
   font-size: 2rem;
@@ -229,6 +237,7 @@ body {
   text-align: center;
   margin-bottom: 1rem;
 }
+
 
 .legacy-image {
   width: 380px;
@@ -262,6 +271,7 @@ body {
 
   .section-title {
     font-size: 2rem;
+
   }
 
   .legacy-text {
@@ -312,6 +322,7 @@ body {
   font-size: 2.5rem;
   font-weight: bold;
   color: #e67e22;
+  
 }
 
 .legacy-text {
@@ -319,14 +330,17 @@ body {
   color: black;
 }
 
+
 .services-wrapper {
   display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-
-  overflow-y: hidden;
-  gap: 2rem;
+  flex-wrap: nowrap;  
+  overflow-x: auto; 
+  
+  overflow-y: hidden;  
+  gap: 20px;          
   justify-content: start;
+  
+
 }
 
 .service-card {
@@ -334,11 +348,10 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  flex: 0 0 auto; /* Prevents cards from shrinking or stretching */
-  width: 350px;
+  flex: 0 0 auto;  /* Prevents cards from shrinking or stretching */
+  width: 350px;    
   padding: 15px;
   transition: transform 0.3s ease-in-out;
-  
   margin-bottom: 1rem;
 }
 
@@ -351,6 +364,7 @@ body {
   height: 280px;
   object-fit: cover;
   border-radius: 8px;
+  
 }
 
 .service-card h5 {
@@ -363,6 +377,8 @@ body {
   font-size: 1rem;
   color: #666;
 }
+
+
 
 /* book an appointment section */
 /* Section Styling */
@@ -404,6 +420,7 @@ body {
   transform: translateY(-3px);
 }
 
+
 .happy-clients {
   padding: 2rem;
   background: linear-gradient(135deg, #ffd700, #ffffff);
@@ -416,15 +433,15 @@ body {
   min-width: 90vw;
   max-width: 90vw;
 
-  p {
-    font-size: 1.1rem;
-    color: #cc6c01;
-    max-width: 800px;
-    margin: auto;
-  }
+p {
+  font-size: 1.1rem;
+  color: #cc6c01;
+  max-width: 800px;
+  margin:auto;
+}
 
   .section-heading {
-    font-family: "Dancing Script", cursive;
+    font-family: 'Dancing Script', cursive;
     font-size: 2.5rem;
     color: #e67e22;
     margin-bottom: 2rem;
@@ -495,6 +512,7 @@ body {
   z-index: 10;
   transition: 0.3s;
 }
+
 
 .scroll-btn.left {
   left: 20px;
@@ -568,26 +586,26 @@ body {
   object-fit: contain;
 }
 .justdial-link {
-  text-decoration: none; /* Removes underline */
-  color: black; /* Default text color */
+  text-decoration: none;  /* Removes underline */
+  color: black;           /* Default text color */
   font-weight: bold;
-  font-size: 18px; /* Adjust size */
-  transition: color 0.3s ease; /* Smooth hover effect */
+  font-size: 18px;         /* Adjust size */
+  transition: color 0.3s ease;  /* Smooth hover effect */
 }
 
 .justdial-link:hover {
-  color: brown; /* Change text to yellow on hover */
+  color: brown;  /* Change text to yellow on hover */
 }
 .google-link {
-  text-decoration: none; /* Removes underline */
-  color: black; /* Default text color */
+  text-decoration: none;  /* Removes underline */
+  color: black;           /* Default text color */
   font-weight: bold;
-  font-size: 18px; /* Adjust size */
-  transition: color 0.3s ease; /* Smooth hover effect */
+  font-size: 18px;         /* Adjust size */
+  transition: color 0.3s ease;  /* Smooth hover effect */
 }
 
 .google-link:hover {
-  color: brown; /* Change text to yellow on hover */
+  color: brown;  /* Change text to yellow on hover */
 }
 /* Close Button Fix */
 .close-btn {
@@ -601,11 +619,12 @@ body {
   z-index: 1100;
 }
 
+
 /* footer section */
 .footer {
   background: linear-gradient(45deg, #ffa500, #ffcc33);
   color: black;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   padding: 2rem 1rem 1rem 1rem;
 }
 
@@ -630,7 +649,7 @@ body {
 }
 
 .brand h2 {
-  font-family: "Cursive", sans-serif;
+  font-family: 'Cursive', sans-serif;
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
@@ -699,6 +718,7 @@ body {
 .Address_footer:hover {
   color: #ff6600;
 }
+
 
 @media (max-width: 768px) {
   .footer-row {
