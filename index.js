@@ -21,6 +21,29 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+window.addEventListener("DOMContentLoaded", function () {
+  const video = document.getElementById("video");
+  const loadingBg = document.querySelector(".loading_bg");
+
+
+  // Check if video is already loaded
+  if (video.readyState >= 3) {  // 3 means the video can play through
+    showVideo();
+  } else {
+    video.addEventListener("canplaythrough", showVideo);
+    video.addEventListener("error", function (e) {
+      console.error("Error loading video:", e);
+    });
+  }
+
+  function showVideo() {
+    console.log("Video loaded");
+    loadingBg.style.display = "none";  // Hide the loading screen
+    video.style.display = "block";     // Show the video
+  }
+});
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const navbarToggler = document.querySelector(".navbar-toggler");
   const heroContent = document.querySelector("#heroSection .hero-content");
