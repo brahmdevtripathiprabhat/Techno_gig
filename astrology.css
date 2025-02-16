@@ -107,7 +107,7 @@ border-radius: 10px;
   margin-bottom: 2rem;
   color: #000;
   text-align: center;
-  min-height: 30vh;
+  min-height: auto;
 }
 
 .rashi-image {
